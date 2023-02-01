@@ -1,7 +1,9 @@
 module MetXPlots
 
     using MetX
-    using Plots
+    using Reexport
+    
+    @reexport using Plots
     
     #! include .
     include("marginals.jl")
