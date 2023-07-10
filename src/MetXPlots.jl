@@ -1,6 +1,7 @@
 module MetXPlots
 
-    using MetX
+    using MetXBase
+    using MetXEP
     using Reexport
     
     @reexport using Plots
