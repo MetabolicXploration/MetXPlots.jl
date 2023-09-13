@@ -25,6 +25,7 @@
 # end
 
 function plot_marginal!(p::AbstractPlot, epm::FluxEPModelT0, rxn; 
+        normalize = identity,
         sample_xbins = 1000, 
         sample_digits = 15, 
         pkwargs...
@@ -32,5 +33,6 @@ function plot_marginal!(p::AbstractPlot, epm::FluxEPModelT0, rxn;
     xs, ws = sample_tnorm(epm, rxn; 
         xbins = sample_xbins, digits = sample_digits
     )
+    ws = normalize(ws)
     plot!(p, xs, ws; pkwargs...)
 end
