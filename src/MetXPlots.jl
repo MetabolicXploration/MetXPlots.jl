@@ -1,6 +1,7 @@
 module MetXPlots
 
     using MetXBase
+    using MetXBase.MassExport
     using MetXEP
     using Reexport
     
